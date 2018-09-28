@@ -3,14 +3,22 @@ import { FlatList, View } from 'react-native'
 import PropTypes from 'prop-types'
 import ChatMessage from './ChatMessage'
 
-const ChatLog = ({ chats }) => {
-  return (
-    <FlatList
-      data={chats}
-      keyExtractor={(item, index) => index}
-      renderItem={({ item }) => <ChatMessage chatMessage={item} />}
-    />
-  )
+class ChatLog extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <FlatList
+        data={this.props.chats}
+        keyExtractor={(item, index) => index}
+        renderItem={({ item }) => (
+          <ChatMessage navigation={this.props.navigation} chatMessage={item} />
+        )}
+      />
+    )
+  }
 }
 
 ChatLog.propTypes = {
