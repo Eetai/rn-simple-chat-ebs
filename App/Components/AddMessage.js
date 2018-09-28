@@ -6,7 +6,7 @@ class AddMessage extends React.Component {
 
     constructor(props) {
       super(props)
-      this.state = { text: 'Type here' }
+      this.state = { text: '' }
     }
 
 handleButtonClick = () => {

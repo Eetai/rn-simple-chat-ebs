@@ -7,7 +7,7 @@ const ChatLog = ({ chats }) => {
   return (
     <FlatList
       data={chats}
-      keyExtractor={(item, index) => item.key}
+      keyExtractor={(item, index) => index}
       renderItem={({ item }) => <ChatMessage chatMessage={item} />}
     />
   )

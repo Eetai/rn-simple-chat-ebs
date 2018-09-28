@@ -3,7 +3,6 @@ import { put } from 'redux-saga/effects'
 import lorem from 'lorem-ipsum-react-native'
 
 const emails = [
-  'a@b.com',
   'test@rehashstudio.com',
   'steve@jobs.com',
   'hello@world.com',
