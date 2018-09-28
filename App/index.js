@@ -7,6 +7,7 @@ import createSagaMiddleware from 'redux-saga'
 import ConnectedChatLog from './Containers/ConnectedChatLog'
 import SimpleChatApp from './Reducers'
 import SimpleChatSaga from './Sagas'
+import ConnectedAddMessage from './Containers/ConnectedAddMessage'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
@@ -18,10 +19,12 @@ sagaMiddleware.run(SimpleChatSaga)
 
 export default class App extends React.Component {
   render() {
+
     return (
       <Provider store={store}>
         <View style={styles.container}>
            <ConnectedChatLog />
+           <ConnectedAddMessage />
          </View>
       </Provider>
     )
